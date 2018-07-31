@@ -1,0 +1,52 @@
+.login-button{
+    text-align: center;
+    margin-left: 146px;
+    margin-top: 0px;
+    width: 112px;
+} 
+.userName{
+   margin-top: 6px;
+}
+.password{
+   margin-top: 17px;
+}
+.forgot-password{
+    padding-top: 10px;
+}
+.login-page{
+   background-color: #d2d6de;
+   height: 700px;
+   width: 1369px;
+   margin-top: -151px;
+   margin-left: -20px;
+
+
+}
+.login-box{
+   width: 495px;
+   margin: 11% auto;
+   margin-top: 258px;
+}
+.login-box-body{
+
+   background: #fff;
+   padding: 25px;
+   border-top: 0;
+   color: #666;
+   
+   align-items: center
+}
+.login-box-msg{
+   margin: 0;
+   text-align: center;
+   padding: 30px 20px 20px 20px;
+   font-size: 25px;
+   font-style: oblique;
+   font-family: cursive;
+   margin-top: -40px;
+}
+.box{
+    width: 600px;
+    /* background-color: red; */
+    margin: 11%auto;
+}

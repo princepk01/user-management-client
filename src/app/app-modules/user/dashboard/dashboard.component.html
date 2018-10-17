@@ -1,0 +1,12 @@
+<div class="row menu-page">
+    <div class="col-md-3">
+        <app-menu (loadContent)="loadList($event)">
+</app-menu>
+        
+    </div>
+    <div class="col-md-9 right" >
+        <app-login-list *ngIf="menuNameContent === 'userList'" [menuName] = "menuNameContent"></app-login-list>
+        <app-registraton *ngIf="menuNameContent === 'addUser'"> </app-registraton>
+      </div>
+      </div>
+<!-- <button (click)="login();">Login</button> -->

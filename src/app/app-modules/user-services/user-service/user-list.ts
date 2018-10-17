@@ -1,0 +1,19 @@
+export interface UserList {
+    city;
+    country;
+    dateOfBirth;
+    email;
+    fatherName;
+    gender;
+    gmtCreated;
+    gmtModified;
+    id;
+    mobileNumber;
+    motherName;
+    name;
+    permanentAddress;
+    pinCode;
+    presentAddress;
+    state;
+    userId;
+}

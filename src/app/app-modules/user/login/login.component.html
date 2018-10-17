@@ -1,45 +1,54 @@
-
-<!-- <router-outlet></router-outlet>
-<button class="btn btn-success" (click)="registration();">Sign Up</button><br><br>
-<button class="btn btn-success" (click)="forgot();">Forgot Passeord</button> -->
 <div class="row login-page">
   <div class="row-md-12 login-box">
-       <div class="login-box-body col-md-12">
-                  <p class="login-box-msg">Administrator Login</p>
-     <!-- <div class="row-md-12 box"> -->
-        <div class="form-group userName row">
-            <label class="control-label col-sm-4" for="userName">User Name</label>
-         
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="userName" placeholder="Enter user name">
-              <!-- <span class="glyphicon glyphicon-envelope form-control-feedback"></span> -->
-            </div>
-          </div>
-    <div class="form-group password row">
-            <label class="control-label col-sm-4" for="password">Password</label>
-            <div class="col-sm-8">
-              <input type="password" class="form-control" id="password" placeholder="Enter user password">
-              <!-- <span class="glyphicon glyphicon-lock form-control-feedback"></span> -->
-          </div>
+    <div class="login-box-body col-md-12">
+      <div class="form-group userName row">
+        <div class="col-sm-12">
+           
+          <label class="control-label " for="userName">User Name</label>
+          <span class="input-group-addon">
+              <i class="fa fa-envelope"></i>
+            </span>
+          <input type="text" class="form-control" [(ngModel)]="userName" id="userName" placeholder="Enter user name">
+        </div>
+      </div>
+      <div class="form-group password row">
+        <div class="col-sm-12">
+          <label class="control-label" for="password">Password</label>
+          <span class="input-group-addon">
+              <i class="fa fa-lock"></i>
+            </span><i class="fa fa-home"></i>
+          <input type="password" class="form-control" [(ngModel)]="userPassword" id="userPassword" placeholder="Enter user password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-12">
+          <button class="btn btn-success login-button" (click)="userLogin()">Login </button>
+        </div>
+        <div class="col-md-12">
+          <button class="btn btn-success login-button" (click)="loadUser()">Load User </button>
+        </div>
+      </div>
+      <div class="col-md-12 ">
+        <a class="forgot-password" routerLink="/forgot" (click)="forgot()">Forgot Password</a>
+      </div>
+      <div class="col-md-12 sign-up">
+        <a class="forgot-password" routerLink="/registration" (click)="registration()">Sign Up</a>
+      </div>
     </div>
-    <div class="form-group">        
-            <div class="col-md-12">
-            <button class="btn btn-success login-button" (click)="login()">
-                            Login
-                            
-                          </button>
     </div>
-          </div>
-          <div class="col-md-12 forgot-password">
-                <!-- <label>   <a href="/resetPassword">Forgot Username and Password?</a></label> -->
-                <button class="btn btn-success" (click)="forgot();">Forgot Passeord</button>
-            </div>
-            <div class="col-md-12 sign-up">
-                <!-- <label (click)="registration();">   <a href="#">Don't have account </a></label> -->
-                <button class="btn btn-success" (click)="registration();">Sign Up</button>
-                
-            </div>
-     </div>
-       <!-- </div> -->
-  </div>
-  </div>
+</div>
+<!-- <div class="input-group input-group-lg">
+  <span class="input-group-addon">
+    <i class="fa fa-envelope"></i>
+  </span>
+  <input class="form-control" type="text" placeholder="Email address">
+</div>
+<div class="input-group input-group-lg">
+  <span class="input-group-addon">
+    <i class="fa fa-lock"></i>
+  </span>
+  <input class="form-control" type="password" placeholder="Password">
+</div>
+<span class="glyphicon glyphicon-pencil"></span> Pencil 
+<i class="fa fa-eyedropper"></i>ppppp
+<i class="fa fa-pencil"></i>ooooo -->

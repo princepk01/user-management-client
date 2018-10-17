@@ -5,16 +5,25 @@
     width: 112px;
 } 
 .userName{
-   margin-top: 6px;
+    color: red;
+    font-size: 20px;
+    margin-top: 6px;
 }
 .password{
    margin-top: 17px;
+   color: red;
+   font-size: 20px;
 }
 .forgot-password{
-    padding-top: 10px;
+    color: red;
+    font-size: 20px;
+    padding-top: 0px;
 }
 .login-page{
-   background-color: #d2d6de;
+    /* background: url(/assets/images/plain-high-definition.jpg); */
+    background: url(/assets/images/glacier-bay-mirrors-901010-64_1000.jpg);
+    /* glacier-bay-mirrors-901010-64_1000 */
+   /* background-color: #d2d6de; */
    height: 700px;
    width: 1369px;
    margin-top: -151px;
@@ -28,8 +37,9 @@
    margin-top: 258px;
 }
 .login-box-body{
-
-   background: #fff;
+    /* background: url(/assets/images/plain-high-definition.jpg); */
+    background-image: url(/assets/images/114-plain-nd-5.jpg);
+   /* background: #fff; */
    padding: 25px;
    border-top: 0;
    color: #666;

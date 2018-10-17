@@ -3,6 +3,9 @@ import { RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {RegistratonComponent} from './registraton/registraton.component';
 import {ForgotPasswordComponent} from './forgot-password/forgot-password.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {LoginListComponent} from './login-list/login-list.component';
+
 // import{
 //     ForgotPasswordComponent,
 //     LoginComponent,
@@ -14,13 +17,13 @@ import {ForgotPasswordComponent} from './forgot-password/forgot-password.compone
         RouterModule.forChild([
             {
                 path: '',
-                component: LoginComponent
+               component: LoginComponent   
             },
             {
                 path: 'login',
                 component: LoginComponent
             },
-            {
+            {   
                 path: 'registration',
                 component: RegistratonComponent
             },
@@ -28,6 +31,15 @@ import {ForgotPasswordComponent} from './forgot-password/forgot-password.compone
                 path: 'forgot',
                 component: ForgotPasswordComponent
             },
+            {
+                path: 'loginList',
+                component: LoginListComponent
+            },
+            {
+                path: 'dashboard',
+                component: DashboardComponent
+                
+            },            
             {
                 path: '**',
                 redirectTo: '',

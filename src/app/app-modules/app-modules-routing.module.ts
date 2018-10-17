@@ -2,7 +2,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {AppModuleComponent} from './app-module/app-module.component';
-import {LoginComponent} from './user/login/login.component'
+import {LoginComponent} from './user/login/login.component';
 
 /**
  * App modules routing
@@ -15,6 +15,7 @@ import {LoginComponent} from './user/login/login.component'
          RouterModule.forChild([
              {
                  path: '',
+                 //component : AppModuleComponent,
                  component : AppModuleComponent,
                  children: [
                      {

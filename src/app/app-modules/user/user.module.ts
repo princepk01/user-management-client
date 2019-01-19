@@ -12,11 +12,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { Angular2FontawesomeModule } from 'angular2-fontawesome/angular2-fontawesome';
 import { MenuComponent } from './menu/menu.component';
 import {MenuItem} from 'primeng/api';
-// import {PanelMenu} from 'primeng/panelmenu';
-//import {MenuItem} from 'primeng/primeng'; 
 import {PanelMenuModule} from 'primeng/panelmenu';
 import {MenuModule} from 'primeng/primeng';
 import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
+import {DropdownModule} from 'primeng/dropdown';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {CalendarModule} from 'primeng/calendar';
+import {FileUploadModule} from 'primeng/fileupload';
+
+
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -30,6 +36,12 @@ import {TableModule} from 'primeng/table';
         PanelMenuModule,
         MenuModule,
         TableModule,
+        ButtonModule,
+        InputTextModule,
+        DropdownModule,
+        InputTextareaModule,
+        CalendarModule,
+        FileUploadModule
   //      BrowserAnimationsModule,
     ],
     schemas: [ CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA ],

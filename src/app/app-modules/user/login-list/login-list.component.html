@@ -2,29 +2,40 @@
   login-list works!
   {{menuName}}
 </p> -->
-<!-- <h3 class="first">Basic</h3>
-<p-table [value]="userList">
+<h3 class="first">Basic</h3>
+<p-table [value]="userList" [paginator]="true" [rows]="10" [scrollable]="true" scrollHeight="500px" [style]="{width:'1100px'}">
     <ng-template pTemplate="header">
         <tr style="text-align: center">
-            <th>Id</th>
+            <!-- <th style="width: 48px;">Id</th> -->
+            <th>User Id</th>
             <th>Name</th>
-            <th>Address</th>
-            <th>Father Name</th>
+            <th>Date Of Birth</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>City</th>
+            <!-- <th style="width: 100px;">State</th> -->
+            <th style="width: 100px;">Pin Code</th>
         </tr>
     </ng-template>
-    <ng-template pTemplate="body" let-data>
-        <tr>
-            <td>{{data.id}}</td>
-            <td>{{data.name}}</td>
-            <td>{{data.permanentAddress}}</td>
-            <td>{{data.fatherName}}</td>
+   
+    <ng-template pTemplate="body" let-data >
+        <tr style="text-align: center">
+            <!-- <td style="width: 48px;">{{data.id}}</td> -->
+            <td style="width : 163px;">{{data.userId}}</td>
+            <td style="width : 163px;">{{data.name}}</td>
+            <td style="width : 164px;">{{data.dateOfBirth}}</td>
+            <td style="width : 164px;">{{data.email}}</td>
+            <td style="width : 164px;">{{data.mobileNumber}}</td>
+            <td style="width : 164px;">{{data.city}}</td>
+            <!-- <td style="width: 100px;">{{data.state}}</td> -->
+            <td>{{data.pinCode}}</td>
         </tr>
     </ng-template>
-</p-table> -->
+</p-table>
 
-<h3>Dynamic Columns</h3>
+<!-- <h3>Dynamic Columns</h3>
 <p-table [columns]="cols" [value]="userList" [paginator]="true" [rows]="10" [scrollable]="true" scrollHeight="400px" [style]="{width:'1103px'}" >
-        <!-- [scrollable]="true" scrollHeight="200px" frozenWidth="200px" -->
+        <!-- [scrollable]="true" scrollHeight="200px" frozenWidth="200px" --
         <ng-template pTemplate="colgroup" let-columns>
                 <colgroup>
                     <col *ngFor="let col of columns" [style.width]="col.width">
@@ -47,14 +58,17 @@
                     {{rowData[col.field]}}
                      
             </td>
-            <td>
-              <a href="/app/user/registration">  <i class="pi pi-fw pi-pencil"></i></a>
-              <a href="/app/user">  <i class="pi pi-fw pi-trash"></i></a>
+            <td *ngFor="let col of columns" class="ui-resizable-column">
+                    <!-- {{rowData.col.field}} -->
+                    <!-- <button pButton type="button" icon="pi pi-fw pi-pencil"  class="ui-button-rounded"></button>
+                    <button pButton type="button" icon="pi pi-fw pi-trash"  class="ui-button-rounded ui-button-danger"></button> --
+              <a href="/registration" >  <i class="pi pi-fw pi-pencil"></i></a> 
+              <!-- <a href="/app/user" >  <i class="pi pi-fw pi-trash" value="{{rowData[col.field]}}"></i></a> --
             </td>
            
         </tr>
     </ng-template>
-</p-table>
+</p-table> -->
 <!-- <p-table [value]="userList">
     <ng-template pTemplate="header">
         <tr>

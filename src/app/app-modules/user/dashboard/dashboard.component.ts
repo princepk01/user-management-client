@@ -25,6 +25,6 @@ export class DashboardComponent implements OnInit {
   }
 
   loadList(event: any) {
-    this.menuNameContent = event;    
+    this.menuNameContent = event;   
   }
 }

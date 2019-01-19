@@ -1,104 +1,131 @@
-<!-- <br><br>
-<button class="btn btn-success btn-lg login-button" (click)="login()">Already have account</button> -->
-<div class="sign-up-page">
-  <div class="row-md-12 sign-up-box">
-    <!-- <div class="col-md-12 sign-up-form form-vertical">  -->
-    <div class="col-md-12 sign-up-box-body form-vertical">
-      <p class="head">Create Your Account Here</p>
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="name">Name</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+<div>
+    <div class="card-header row" style="background-color: #005b9f; color: #ffffff;font-size: 19px; width: 1100px;">
+        Registration Form
+    </div>
+    <div class="row border-box">
+        <div class="col-sm-4 arrangement">
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color:darkblue;">Student Name</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" [(ngModel)]="studentName" pInputText placeholder="Enter your name">
+                </span>
+            </div>
+            <div class="row">
+                <div class="ui-g-12 ui-md-12">
+                    <span> <label for="float-input" style="font-size: 20px; color: darkblue">Date Of Birth</label></span>
+                    <p-calendar [(ngModel)]="dateOfBirth" [showIcon]="true" dateFormat="dd-mm-yy"></p-calendar>
+                </div>
+            </div>
+            <div class="row">
+                <span style="font-size: 20px; color: darkblue">Class</span>
+                <span class="ui-float-label">
+                    <p-dropdown [options]="standard_class" [(ngModel)]="standardClass" [style]="{'width':'242px'}" editable="false"></p-dropdown>
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Gender </label></span>
+                <span class="ui-float-label">
+                    <p-dropdown [options]="select_gender" [(ngModel)]="gender" [style]="{'width':'242px'}" editable="false"></p-dropdown>
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Email</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" [(ngModel)]="email" pInputText placeholder="Enter email">
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Mobile Number</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText  [(ngModel)]="studentName"mobileNumber="Enter mobile number">
+                </span>
+            </div>
         </div>
-      </div>
-      <!-- <br><br> -->
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="fatherName">Father Name</label>
-        <div class="col-sm-8">
-          <input type="fatherName" class="form-control" id="fatherName" placeholder="Enter father name" name="fatherName">
+        <div class="col-sm-4 arrangement">
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Father Name</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="fatherName" placeholder="Enter father name">
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Mother Name</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="motherName" placeholder="Enter mother name">
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Father Mob. Number</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="fatherMobileNumber" placeholder="Enter father mob. no.">
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Father Occupation</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="fatherOccupation" placeholder="Enter father occupation">
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Mother Occupation</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="motherOccupaton" placeholder="Enter mother occupation">
+                </span>
+            </div>
+            <div class="row">
+                <span> <label for="float-input" style="font-size: 20px; color: darkblue;">Present Address</label></span>
+                <span class="ui-float-label">
+                    <textarea pInputTextarea [(ngModel)]="presentAddress" style="width: 240px;" placeholder="Enter present address"></textarea>
+                </span>
+            </div>
         </div>
-      </div>
-      <!-- <br><br> -->
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="dateOfBirth">Date Of Birth</label>
-        <div class="col-sm-8">
-          <input type="date" class="form-control" id="dateOfBirth" placeholder="Enter date of birth" name="dateOfBirth">
-        </div>
-      </div>
-      <!-- <br><br> -->
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="gender">Gender</label>
-        <div class="col-sm-8">
-          <select class="col-sm-8 dropdown" id="gender">
-                                    <option value="">Select gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    
-                     </select>
-        </div>
-      </div>
-      <!-- <br><br> -->
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="mobile">Contact Number</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="mobile" placeholder="Enter contact number" name="mobile">
-        </div>
-      </div>
-      <!-- <br><br> -->
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="email">Email Address</label>
-        <div class="col-sm-8">
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-        </div>
-      </div>
-      <!-- <br><br> -->
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="address">Address</label>
-        <div class="col-sm-8">
-          <!-- <input type="textarea" class="form-control" id="address" placeholder="Enter address" name="address"> -->
-          <textarea class="form-control" id="address" rows="3" placeholder="Enter address"></textarea>
-        </div>
-      </div>
 
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="country">Cuntry</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="country" placeholder="Enter country" name="country">
+        <div class="col-sm-4 arrangement">
+            <!-- <div class="row">
+                <p-fileUpload name="demo[]" 
+                multiple="multiple" accept="image/*" maxFileSize="1000000">
+            <ng-template pTemplate="content">
+                <ul *ngIf="uploadedFiles.length">
+                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                </ul>
+            </ng-template>
+        </p-fileUpload>
+    </div> -->
+            <div class="row">
+                <label for="float-input" style="font-size: 20px; color: darkblue;">Permanent Address</label>
+                <span class="ui-float-label">
+                    <textarea pInputTextarea [(ngModel)]="permanentAddress" style="width: 240px;" placeholder="Enter permanent address"></textarea>
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Country</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="country" placeholder="Enter your country">
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">State</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="state" placeholder="Enter state">
+                </span>
+            </div>
+            <div class="row">
+                <span> <label for="float-input" style="font-size: 20px; color: darkblue;">City</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="city" placeholder="Enter city">
+                </span>
+            </div>
+            <div class="row">
+                <span><label for="float-input" style="font-size: 20px; color: darkblue;">Zip Code</label></span>
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="zipCode" placeholder="Enter zip code">
+                </span>
+            </div>
         </div>
-      </div>
-
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="state">State</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="state" placeholder="Enter state" name="state">
+        <div class="button-arrangement">
+            <button pButton type="button" label="SUBMIT" class="ui-button-rounded ui-button-success"></button>
+            <button pButton type="button" label="RESET" class="ui-button-rounded ui-button-danger"></button>
         </div>
-      </div>
-
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="city">City</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="city" placeholder="Enter city" name="city">
-        </div>
-      </div>
-
-      <div class="form-group row">
-        <label class="control-label col-sm-4" for="zipCode">Zip Code</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control" id="zipCode" placeholder="Enter zip code" name="zipCode">
-        </div>
-      </div>
-
-      <div class="form-group ">
-        <div class="col-md-12 register">
-          <button class="btn btn-success btn-lg login-button" (click)="signup()">Register</button>
-        </div>
-      </div>
-      <div class="form-group ">
-        <div class="col-md-12 register">
-          <button class="btn btn-success btn-lg login-button" (click)="login()">Already have account</button>
-        </div>
-      </div>
 
     </div>
-  </div>
 </div>
